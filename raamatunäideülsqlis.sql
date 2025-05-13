@@ -7,6 +7,7 @@ raamatID int not null PRIMARY KEY identity(1,1),
 raamatnimetus varchar(100) not null,
 zanrID int,
 authorID int,
+trykID int,
 hind decimal(5,2),
 v_aasta int);
 SELECT * FROM raamat;
@@ -54,4 +55,17 @@ VALUES(
 
 SELECT * FROM raamat;
 --raamatu kustutamine - 1 kirje kustutamine
-DELETE FROM raamat WHERE raamatID=5
+DELETE FROM raamat WHERE raamatID>2
+
+CREATE TABLE trykikoda(
+trykID int not null PRIMARY KEY identity(1,1),
+nimi varchar(100) not null,
+aadress varchar(100) not null
+);
+INSERT INTO trykikoda(
+trykID, nimi, aadress)
+VALUES (
+1,'ajaleht', 'viru tn 24');
+
+ALTER TABLE raamat ADD foreign key (trykID)
+REFERENCES trykikoda(trykID)
