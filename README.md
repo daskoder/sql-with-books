@@ -1,2 +1,3 @@
-![pilt](https://github.com/user-attachments/assets/48605f20-da12-405b-b683-91d9c449023c)
+![pilt](https://github.com/user-attachments/assets/6de93026-fb0f-4536-8ee3-a2b91544bb6b)
+
 
